@@ -81,9 +81,6 @@ div:focus {
 }
 
 .banner {
-	max-height: 672px;
-	min-height: 450px;
-	height: 55vh;
 	background: #fff;
 	display: flex;
     align-items: flex-end;
@@ -114,48 +111,47 @@ div:focus {
 
 .banner picture img {
 	object-fit: cover;
-	object-position: top;
 	width: 100%;
 	height: 100%
 }
 
 .banner h1 {
-	font-size: 44px;
 	color: #fff;
 	font-family: 'Georgia';
 	margin: 0;
 	max-width: 624px;
 	z-index: 10;
+	font-size: 44px;
 	margin-left: 40px;
     margin-bottom: 40px;
+	margin-right: 40px;
+	margin-top: 200px;
 }
 
 .banner h2 {
-    font-size: 34px;
     color: #fff;
     font-family: 'Georgia';
     margin: 0;
     max-width: 624px;
     z-index: 10;
+    font-size: 34px;
 	margin-left: 40px;
     margin-bottom: 40px;
+    margin-right: 40px;
 }
 
 @media (max-width:600px) {
-	.banner {
-		min-height: 0;
-		height: 100vh
-	}
 	.banner picture img {
 		object-position: center
 	}
 
 	.banner h1 {
-		margin-top: 360px;
 		width: auto;
 		font-size: 32px;
 		margin-left: 20px;
 		margin-bottom: 20px;
+		margin-right: 20px;
+		margin-top: 390px;
 	}
 
 	.banner h2 {
@@ -163,15 +159,30 @@ div:focus {
 		font-size: 24px;
 		margin-left: 20px;
 		margin-bottom: 20px;
+		margin-right: 20px;
 	}
 }
 
 @media (max-width:413px) {
-	/* .banner h1 {
-		bottom: 24px;
-		left: 24px
-	} */
+	.banner h1 {
+		font-size: 26px;
+	}
+
+	.banner h2 {
+		font-size: 22px;
+	}
 }
+
+@media (max-height:580px) {
+	.banner h1 {
+		margin-top: 360px;
+	}
+
+	.banner h2 {
+		visibility: collapse;
+	}
+}
+
 
 .banner+nav {
 	display: flex;
