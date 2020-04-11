@@ -1,0 +1,766 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Georgia', sans-serif
+}
+
+html,
+body {
+	height: 100%;
+	background: #fff;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: 'Georgia', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	scroll-behavior: smooth
+}
+
+a {
+	text-decoration: none;
+	color: #000
+}
+
+a:hover {
+	text-decoration: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	font-weight: 400
+}
+
+p,
+p * {
+	font-size: 23px;
+	font-family: 'Georgia';
+	line-height: 1.5em;
+	margin-bottom: 1em
+}
+
+@media (max-width:600px) {
+	p,
+	p * {
+		font-size: 18px
+	}
+}
+
+a:focus {
+	outline: none;
+	outline: 2px dashed;
+	outline-offset: 4px
+}
+
+section:focus,
+div:focus {
+	outline: 0
+}
+
+.backnav {
+	max-width: 704px;
+	width: 100%;
+	padding: 0 40px;
+	margin: 0 auto
+}
+
+.backnav a {
+	font-size: 14px;
+	color: #2d80a2;
+	font-weight: 600;
+	text-transform: uppercase
+}
+
+.banner {
+	max-height: 672px;
+	min-height: 450px;
+	height: 55vh;
+	background: #fff;
+	display: flex;
+    align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.banner:before {
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: .60;
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #000000 100%);
+	z-index: 10;
+	mix-blend-mode: multiply
+}
+
+.banner picture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+
+.banner picture img {
+	object-fit: cover;
+	object-position: top;
+	width: 100%;
+	height: 100%
+}
+
+.banner h1 {
+	font-size: 44px;
+	color: #fff;
+	font-family: 'Georgia';
+	margin: 0;
+	max-width: 624px;
+	z-index: 10;
+	margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.banner h2 {
+    font-size: 34px;
+    color: #fff;
+    font-family: 'Georgia';
+    margin: 0;
+    max-width: 624px;
+    z-index: 10;
+	margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width:600px) {
+	.banner {
+		min-height: 0;
+		height: 100vh
+	}
+	.banner picture img {
+		object-position: center
+	}
+
+	.banner h1 {
+		margin-top: 360px;
+		width: auto;
+		font-size: 32px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	.banner h2 {
+		width: auto;
+		font-size: 24px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width:413px) {
+	/* .banner h1 {
+		bottom: 24px;
+		left: 24px
+	} */
+}
+
+.banner+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 40px;
+	border-top: 1px solid #000;
+	background: #c6cde6;
+}
+
+.banner+nav a {
+	display: block;
+	width: calc(50% - 8px);
+	padding: 30px 94px 30px 0;
+	font-size: 23px;
+	line-height: 1.5em;
+	font-family: 'Georgia';
+	border-bottom: 1px solid #000;
+	transition: opacity .2s ease-in-out
+}
+
+.banner+nav a:after {
+	content: '';
+	background: url(img/arrow-down.svg) no-repeat 0 0;
+	width: 8px;
+	height: 14px;
+	position: absolute;
+	right: 10%;
+	top: calc(50% - 7px);
+	transition: all .4s ease-in-out
+}
+
+.banner+nav a:hover {
+	opacity: .6
+}
+
+.banner+nav a:hover:after {
+	transform: translateY(6px)
+}
+
+@media (max-width:600px) {
+	.banner+nav {
+		padding: 0;
+	}
+	.banner+nav a {
+		width: 100%;
+		font-size: 18px;
+		padding: 24px 54px 24px 40px
+	}
+	.banner+nav a:after {
+		right: 40px
+	}
+}
+
+@media (max-width:413px) {
+	.banner+nav a {
+		padding: 24px 38px 24px 24px
+	}
+	.banner+nav a:after {
+		right: 24px
+	}
+}
+
+span.greentext {
+	color:#026f00;
+	font-weight: bold;
+}
+
+span.redtext {
+	color:#ff0000e0;
+	font-weight: bold;
+}
+
+
+main {
+	width: 100%;
+	max-width: 1180px;
+	padding: 0 40px;
+	flex-wrap: wrap
+}
+
+main section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 96px 0;
+	border-bottom: 1px solid;
+}
+
+main section header {
+	width: 384px
+}
+
+main section header h2 {
+	font-size: 44px;
+	font-family: 'Georgia'
+}
+
+main section>div {
+	width: calc(100% - 400px)
+}
+
+main section>div>a {
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: 999vw;
+	display: block;
+	padding: 16px 40px;
+	line-height: 1.35em;
+	font-size: 18px;
+	margin-top: 40px;
+	text-align: center;
+	max-width: 300px;
+	min-width: 300px;
+	border: 0;
+	transition: all .2s ease-in-out
+}
+
+main section>div>a.lg {
+	max-width: 375px;
+	width: 100%;
+	display: inline-flex
+}
+
+main section>div>a:hover {
+	background: #fff;
+	color: #2d80a2
+}
+
+main section>div>a:focus {
+	outline: none
+}
+
+main section>div>a:focus:before {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	width: calc(100% + 12px);
+	height: calc(100% + 12px);
+	border: 2px dashed;
+	border-radius: 999vw
+}
+
+main section.highlight {
+	border-top: 0
+}
+
+main section.highlight:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -333vw;
+	width: 999vw;
+	height: 100%
+}
+
+
+main section.highlight.default {
+	background: #F6F6F6
+}
+
+main section.highlight.default:before {
+	background: #F6F6F6
+}
+
+main section.highlight.default>div>a {
+	box-shadow: 0 0 0 1px #000
+}
+
+main section.highlight.default>div>a:hover {
+	background: #000;
+	color: #fff
+}
+
+main section.highlight.default>ul>li:before {
+	content: "\2022";
+	color: #000;
+	font-weight: 600;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em
+}
+
+main section.highlight+section:not(.highlight) {
+	margin-top: 0;
+	border-top: 0
+}
+
+main section.highlight.siteinfo {
+	background: #c6cde6;
+	padding: 46px 0;
+	border-bottom: 0
+}
+
+main section.highlight.siteinfo:before {
+	background: #c6cde6;
+}
+
+main section.highlight.siteinfo * {
+    color: #000000;
+}
+
+main section.highlight.siteinfo>div>a {
+	box-shadow: 0 0 0 1px #fff
+}
+
+main section.highlight.siteinfo>div>a:hover {
+	background: #fff;
+	color: #C0C0C0
+}
+
+main p a {
+	color: #2d80a2
+}
+
+main a {
+	border-bottom: 2px solid
+}
+
+main ul,
+main ol {
+	margin: 0 0 0 1.5em;
+	list-style: none;
+	padding: 0
+}
+
+main ul li,
+main ol li {
+	color: #000;
+	font-size: 23px;
+	font-family: 'Georgia';
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+
+main ul.institutions li,
+main ol.institutions li {
+	color: #000;
+	font-size: 23px;
+	font-family: 'Georgia';
+	line-height: 1.5em;
+	margin-bottom: 0.5em
+}
+
+
+main ul li:before,
+main ol li:before {
+	content: "\2022";
+	color: #000;
+	font-weight: 600;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em
+}
+
+main ul a,
+main ol a {
+	font-size: 23px;
+	font-family: 'Georgia';
+	color: #2d80a2;
+}
+
+main ol li:before {
+	font-weight: 400;
+	font-size: 29px;
+	width: 1.25em;
+	margin-left: -1.25em
+}
+
+main ol li:nth-child(1):before {
+	content: '1'
+}
+
+main ol li:nth-child(2):before {
+	content: '2'
+}
+
+main ol li:nth-child(3):before {
+	content: '3'
+}
+
+main ol li:nth-child(4):before {
+	content: '4'
+}
+
+main ol li:nth-child(5):before {
+	content: '5'
+}
+
+main ol li:nth-child(6):before {
+	content: '6'
+}
+
+main ol li:nth-child(7):before {
+	content: '7'
+}
+
+main ol li:nth-child(8):before {
+	content: '8'
+}
+
+main ol li:nth-child(9):before {
+	content: '9'
+}
+
+main ol li:nth-child(10):before {
+	content: '10'
+}
+
+main ol li:nth-child(11):before {
+	content: '11'
+}
+
+main ol li:nth-child(12):before {
+	content: '12'
+}
+
+main ol li:nth-child(13):before {
+	content: '13'
+}
+
+main ol li:nth-child(14):before {
+	content: '14'
+}
+
+main ol li:nth-child(15):before {
+	content: '15'
+}
+
+main ol li:nth-child(16):before {
+	content: '16'
+}
+
+main ol ol {
+	margin-top: 1.5em
+}
+
+main ol ol li:nth-child(1):before {
+	content: 'a'
+}
+
+main ol ol li:nth-child(2):before {
+	content: 'b'
+}
+
+main ol ol li:nth-child(3):before {
+	content: 'c'
+}
+
+main ol ol li:nth-child(4):before {
+	content: 'd'
+}
+
+main ol ol li:nth-child(5):before {
+	content: 'e'
+}
+
+main ol ol li:nth-child(6):before {
+	content: 'f'
+}
+
+main ol ol li:nth-child(7):before {
+	content: 'g'
+}
+
+main h3 {
+	font-family: 'Georgia';
+	font-size: 30px
+}
+
+main h4 {
+	font-family: 'Georgia';
+	font-size: 27px
+}
+
+main *+h3 {
+	margin-top: 1.5em
+}
+
+@media (max-width:960px) {
+	main section header {
+		width: 40%
+	}
+	main section>div {
+		width: 50%
+	}
+}
+
+@media (max-width:768px) {
+	main section header {
+		width: 100%;
+		margin-bottom: 40px
+	}
+	main section>div {
+		width: 100%
+	}
+}
+
+@media (max-width:600px) {
+	main section {
+		padding: 48px 0
+	}
+	main section header h2 {
+		font-size: 35px
+	}
+	main section div>a {
+		width: 100%;
+		max-width: 100%;
+		min-width: 1px
+	}
+	main section div>a.lg {
+		text-align: center
+	}
+	main section.highlight+section:not(.highlight) {
+		margin-top: 48px
+	}
+	main ul li,
+	main ol li,
+	main ul.institutions li,
+	main ol.institutions li {
+		font-size: 18px
+	}
+
+	main ul li a,
+	main ol li a,
+	main ul.institutions li a ,
+	main ol.institutions li a  {
+		font-size: 18px;
+		overflow-wrap: break-word;
+	}
+
+	main ul.inline li+li,
+	main ol.inline li+li {
+		margin-left: 16px
+	}
+	main ol li:before {
+		width: 1em;
+		margin-left: -1em;
+		font-size: 23px
+	}
+	main h3 {
+		font-size: 29px
+	}
+	main address {
+		font-size: 18px
+	}
+}
+
+@media (max-width:413px) {
+	main {
+		padding: 0 24px
+	}
+}
+
+article.qa {
+	width: 100%;
+	max-width: 1180px;
+	padding: 0 40px;
+	margin: 100px auto 0 auto
+}
+
+article.qa .backnav {
+	max-width: 100%;
+	padding: 0
+}
+
+article.qa h1 {
+	max-width: 1180px;
+	padding: 0 40% 0 0;
+	width: 100%;
+	margin: 154px auto 64px auto;
+	font-size: 55px;
+	font-family: 'Georgia';
+	color: #000
+}
+
+article.qa .content {
+	margin: 32px auto 48px auto;
+	width: 100%
+}
+
+article.qa .content>div {
+	border-top: 1px solid #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 64px 0
+}
+
+article.qa .content>div * {
+	font-size: 23px;
+	line-height: 1.5em;
+	font-family: 'Georgia'
+}
+
+article.qa .content>div p {
+	line-height: 1.5em;
+	font-family: 'Georgia';
+	margin-bottom: 1em
+}
+
+article.qa .content>div a {
+	text-decoration: none;
+	border-bottom: 2px solid
+}
+
+article.qa .content h2,
+article.qa .content h2 * {
+	font-size: 35px;
+	font-family: 'Georgia';
+	margin-bottom: 1em !important;
+	line-height: 1em;
+	font-weight: 400;
+	width: 380px
+}
+
+article.qa .content .text {
+	width: calc(100% - 476px)
+}
+
+article.qa .content abbr {
+	text-decoration: none
+}
+
+article.qa .content ul {
+	padding: 0;
+	margin: 1em;
+	list-style: none
+}
+
+article.qa .content ul li {
+	color: #707070;
+	font-size: 23px;
+	font-family: 'Georgia';
+	line-height: 1.5em;
+	margin-bottom: 1.5em
+}
+
+article.qa .content ul li:before {
+	content: "\2022";
+	color: #2d80a2;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em
+}
+
+@media (max-width:900px) {
+	article.qa .content>div {
+		flex-wrap: wrap
+	}
+	article.qa .content h2 {
+		font-size: 35px;
+		font-family: 'Georgia';
+		margin-bottom: 1em !important;
+		line-height: 1em;
+		font-weight: 400;
+		width: 100%
+	}
+	article.qa .content .text {
+		width: 100%
+	}
+}
+
+@media (max-width:600px) {
+	article.qa>header {
+		margin-bottom: 32px
+	}
+	article.qa h1 {
+		margin-bottom: 32px;
+		font-size: 44px;
+		padding: 0
+	}
+	article.qa .content {
+		margin: 32px auto 32px auto
+	}
+	article.qa .content>div {
+		padding: 32px 0
+	}
+	article.qa .content>div p {
+		font-size: 18px
+	}
+	article.qa .content>div * {
+		font-size: 18px
+	}
+	article.qa .content>div ul li {
+		font-size: 18px
+	}
+	article.qa .content h2 {
+		font-size: 29px
+	}
+}
