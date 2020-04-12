@@ -1,6 +1,6 @@
 # coloradocovidplasma 
 
-Static website for coloradocovidplasma.org 
+Static website for <a href="https://coloradocovidplasma.org" target="_blank">coloradocovidplasma.org<a> 
 
 <img src="img/coronavirus-cdc.jpg" width="30%">
 
