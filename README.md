@@ -1,6 +1,8 @@
-# coloradocovidplasma
+# coloradocovidplasma 
 
-Static website for coloradocovidplasma.org
+Static website for coloradocovidplasma.org 
+
+<img src="img/coronavirus-cdc.jpg" width="30%">
 
 *The Colorado COVID-19 Convalescent Plasma Project Consortium was established on March 27, 2020, 
 following an urgent outreach to experts at many of Colorado's premier institutions and Vitalant Blood Centers. 
