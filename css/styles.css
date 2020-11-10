@@ -405,7 +405,6 @@ main a {
 main ul,
 main ol {
 	margin: 0 0 0 1.5em;
-	list-style: none;
 	padding: 0
 }
 
@@ -428,17 +427,6 @@ main ol.institutions li {
 	margin-bottom: 0.5em
 }
 
-
-main ul li:before,
-main ol li:before {
-	content: "\2022";
-	color: #000;
-	font-weight: 600;
-	display: inline-block;
-	width: 1em;
-	margin-left: -1em
-}
-
 main ul a,
 main ol a {
 	font-size: 23px;
@@ -446,107 +434,16 @@ main ol a {
 	color: #2d80a2;
 }
 
-main ol li:before {
-	font-weight: 400;
-	font-size: 29px;
-	width: 1.25em;
-	margin-left: -1.25em
-}
-
-main ol li:nth-child(1):before {
-	content: '1'
-}
-
-main ol li:nth-child(2):before {
-	content: '2'
-}
-
-main ol li:nth-child(3):before {
-	content: '3'
-}
-
-main ol li:nth-child(4):before {
-	content: '4'
-}
-
-main ol li:nth-child(5):before {
-	content: '5'
-}
-
-main ol li:nth-child(6):before {
-	content: '6'
-}
-
-main ol li:nth-child(7):before {
-	content: '7'
-}
-
-main ol li:nth-child(8):before {
-	content: '8'
-}
-
-main ol li:nth-child(9):before {
-	content: '9'
-}
-
-main ol li:nth-child(10):before {
-	content: '10'
-}
-
-main ol li:nth-child(11):before {
-	content: '11'
-}
-
-main ol li:nth-child(12):before {
-	content: '12'
-}
-
-main ol li:nth-child(13):before {
-	content: '13'
-}
-
-main ol li:nth-child(14):before {
-	content: '14'
-}
-
-main ol li:nth-child(15):before {
-	content: '15'
-}
-
-main ol li:nth-child(16):before {
-	content: '16'
+main ol {
+	list-style: decimal;
 }
 
 main ol ol {
-	margin-top: 1.5em
+	list-style: lower-alpha;
 }
 
-main ol ol li:nth-child(1):before {
-	content: 'a'
-}
-
-main ol ol li:nth-child(2):before {
-	content: 'b'
-}
-
-main ol ol li:nth-child(3):before {
-	content: 'c'
-}
-
-main ol ol li:nth-child(4):before {
-	content: 'd'
-}
-
-main ol ol li:nth-child(5):before {
-	content: 'e'
-}
-
-main ol ol li:nth-child(6):before {
-	content: 'f'
-}
-
-main ol ol li:nth-child(7):before {
-	content: 'g'
+main ol ol ol {
+	list-style: lower-roman;
 }
 
 main h3 {
